@@ -21,7 +21,7 @@
         .profile-card { width: 380px; padding: 40px 30px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); box-shadow: 0 25px 45px rgba(0,0,0,0.2); text-align: center; transition: 0.5s; }
         .profile-card:hover { transform: translateY(-10px); border-color: #00f2fe; }
 
-        /* Image Styling - Rotation Removed */
+        /* Image Styling - Stable and Fixed */
         .img-box { width: 140px; height: 140px; margin: 0 auto 25px; border-radius: 50%; padding: 5px; background: linear-gradient(45deg, #ff007f, #00f2fe); }
         .img-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: #1e293b; border: 3px solid #0f172a; display: block; }
 
@@ -31,13 +31,13 @@
         .highlight { color: #00f2fe; font-weight: 600; }
         .passion-text { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; }
         
-        /* Fixed Text Styling */
+        /* Fixed Passion Text */
         .fixed-text { font-size: 18px; color: #ff007f; font-weight: bold; margin: 15px auto 20px; }
-
         .bio { color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 30px; }
 
         /* Social Buttons */
-        .social-buttons { display: flex; justify-content: center; gap: 15px; }
+        .social-buttons { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .top-btns { display: flex; gap: 15px; }
         .btn { text-decoration: none; padding: 10px 25px; border-radius: 30px; font-size: 14px; font-weight: 600; color: #fff; border: 2px solid; transition: 0.3s; text-transform: uppercase; }
         
         .btn-youtube { border-color: #ff0000; }
@@ -45,6 +45,9 @@
         
         .btn-insta { border-color: #00f2fe; }
         .btn-insta:hover { background: #00f2fe; box-shadow: 0 0 15px #00f2fe; color: #0f172a; }
+        
+        .btn-discord { border-color: #5865F2; width: 200px; text-align: center; }
+        .btn-discord:hover { background: #5865F2; box-shadow: 0 0 15px #5865F2; }
     </style>
 </head>
 <body>
@@ -71,11 +74,5 @@
             </p>
 
             <div class="social-buttons">
-                <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube">YOUTUBE</a>
-                <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta">INSTAGRAM</a>
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
+                <div class="top-btns">
+                    <a href="
