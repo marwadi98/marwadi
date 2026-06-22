@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +53,7 @@
         .btn-discord-alt:hover { background: #f59e0b; box-shadow: 0 0 15px #f59e0b; color: #0f172a; }
     </style>
 </head>
-<body>
+<body onclick="unlockAudio()">
 
     <audio id="memeAudio" src="http://googleusercontent.com/file_content/6"></audio>
     <audio id="oldAudio" src="http://googleusercontent.com/file_content/5"></audio>
@@ -93,6 +94,12 @@
     </div>
 
     <script>
+        // यह ब्राउज़र को परमिशन देगा
+        function unlockAudio() {
+            document.getElementById("memeAudio").load();
+            document.getElementById("oldAudio").load();
+        }
+
         function playMemeAudio() {
             var audio = document.getElementById("memeAudio");
             audio.currentTime = 0; 
