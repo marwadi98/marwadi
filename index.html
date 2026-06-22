@@ -7,7 +7,7 @@
     <style>
         /* Basic Setup */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0f172a; overflow: hidden; position: relative; cursor: pointer; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0f172a; overflow: hidden; position: relative; }
 
         /* Animated Background Circles */
         .circle { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 1; animation: floatBg 8s infinite alternate ease-in-out; }
@@ -34,10 +34,10 @@
         .bio { color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 30px; }
 
         /* Social Buttons */
-        .social-buttons { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .social-buttons { display: flex; flex-direction: column; align-items: center; gap: 15px; }
         .button-row { display: flex; gap: 10px; justify-content: center; width: 100%; }
         
-        .btn { text-decoration: none; padding: 10px 20px; border-radius: 30px; font-size: 12px; font-weight: 600; color: #fff; border: 2px solid; transition: 0.3s; text-transform: uppercase; cursor: pointer; flex: 1; text-align: center; }
+        .btn { text-decoration: none; padding: 10px 20px; border-radius: 30px; font-size: 12px; font-weight: 600; color: #fff; border: 2px solid; transition: 0.3s; text-transform: uppercase; flex: 1; text-align: center; cursor: pointer; }
         
         .btn-youtube { border-color: #ff0000; }
         .btn-youtube:hover { background: #ff0000; box-shadow: 0 0 15px #ff0000; }
@@ -45,16 +45,16 @@
         .btn-insta { border-color: #00f2fe; }
         .btn-insta:hover { background: #00f2fe; box-shadow: 0 0 15px #00f2fe; color: #0f172a; }
         
-        .btn-discord { border-color: #5865F2; padding: 10px 15px; }
+        .btn-discord { border-color: #5865F2; }
         .btn-discord:hover { background: #5865F2; box-shadow: 0 0 15px #5865F2; }
         
-        .btn-discord-alt { border-color: #f59e0b; padding: 10px 15px; }
+        .btn-discord-alt { border-color: #f59e0b; }
         .btn-discord-alt:hover { background: #f59e0b; box-shadow: 0 0 15px #f59e0b; color: #0f172a; }
     </style>
 </head>
-<body onclick="playSound()">
+<body>
 
-    <audio id="mySong" src="https://www.image2url.com/r2/default/audio/1782158936975-a0e167a5-3f2c-49f2-b8e7-84637b1389fc.mp3"></audio>
+    <audio id="clickAudio" src="http://googleusercontent.com/file_content/5"></audio>
 
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
@@ -79,10 +79,24 @@
 
             <div class="social-buttons">
                 <div class="button-row">
-                    <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube">YOUTUBE</a>
-                    <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta">INSTAGRAM</a>
+                    <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube" onclick="playAudio()">YOUTUBE</a>
+                    <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta" onclick="playAudio()">INSTAGRAM</a>
                 </div>
                 
                 <div class="button-row">
-                    <a href="https://discord.gg/vaawZDVC" target="_blank" class="btn btn-discord">DISCORD 1</a>
-                    <a href="
+                    <a href="https://discord.gg/vaawZDVC" target="_blank" class="btn btn-discord" onclick="playAudio()">DISCORD 1</a>
+                    <a href="https://discord.gg/3gTzBrpB" target="_blank" class="btn btn-discord-alt" onclick="playAudio()">DISCORD 2</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("clickAudio");
+            audio.currentTime = 0; 
+            audio.play();
+        }
+    </script>
+</body>
+</html>
