@@ -54,7 +54,8 @@
 </head>
 <body>
 
-    <audio id="clickAudio" src="http://googleusercontent.com/file_content/5"></audio>
+    <audio id="memeAudio" src="http://googleusercontent.com/file_content/6"></audio>
+    <audio id="oldAudio" src="http://googleusercontent.com/file_content/5"></audio>
 
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
@@ -79,21 +80,26 @@
 
             <div class="social-buttons">
                 <div class="button-row">
-                    <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube" onclick="playAudio()">YOUTUBE</a>
-                    <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta" onclick="playAudio()">INSTAGRAM</a>
+                    <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube" onclick="playMemeAudio()">YOUTUBE</a>
+                    <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta" onclick="playMemeAudio()">INSTAGRAM</a>
                 </div>
                 
                 <div class="button-row">
-                    <a href="https://discord.gg/vaawZDVC" target="_blank" class="btn btn-discord" onclick="playAudio()">DISCORD 1</a>
-                    <a href="https://discord.gg/3gTzBrpB" target="_blank" class="btn btn-discord-alt" onclick="playAudio()">DISCORD 2</a>
+                    <a href="https://discord.gg/vaawZDVC" target="_blank" class="btn btn-discord" onclick="playOldAudio()">DISCORD 1</a>
+                    <a href="https://discord.gg/3gTzBrpB" target="_blank" class="btn btn-discord-alt" onclick="playOldAudio()">DISCORD 2</a>
                 </div>
             </div> 
         </div>
     </div>
 
     <script>
-        function playAudio() {
-            var audio = document.getElementById("clickAudio");
+        function playMemeAudio() {
+            var audio = document.getElementById("memeAudio");
+            audio.currentTime = 0; 
+            audio.play();
+        }
+        function playOldAudio() {
+            var audio = document.getElementById("oldAudio");
             audio.currentTime = 0; 
             audio.play();
         }
