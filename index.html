@@ -7,7 +7,7 @@
     <style>
         /* Basic Setup */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0f172a; overflow: hidden; position: relative; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0f172a; overflow: hidden; position: relative; cursor: pointer; }
 
         /* Animated Background Circles */
         .circle { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 1; animation: floatBg 8s infinite alternate ease-in-out; }
@@ -52,7 +52,7 @@
         .btn-discord-alt:hover { background: #f59e0b; box-shadow: 0 0 15px #f59e0b; color: #0f172a; }
     </style>
 </head>
-<body onclick="enableAudio()">
+<body onclick="playSound()">
 
     <audio id="mySong" src="https://www.image2url.com/r2/default/audio/1782158936975-a0e167a5-3f2c-49f2-b8e7-84637b1389fc.mp3"></audio>
 
@@ -79,27 +79,10 @@
 
             <div class="social-buttons">
                 <div class="button-row">
-                    <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube" onclick="playSound()">YOUTUBE</a>
-                    <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta" onclick="playSound()">INSTAGRAM</a>
+                    <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube">YOUTUBE</a>
+                    <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta">INSTAGRAM</a>
                 </div>
                 
                 <div class="button-row">
-                    <a href="https://discord.gg/vaawZDVC" target="_blank" class="btn btn-discord" onclick="playSound()">DISCORD 1</a>
-                    <a href="https://discord.gg/3gTzBrpB" target="_blank" class="btn btn-discord-alt" onclick="playSound()">DISCORD 2</a>
-                </div>
-            </div> 
-        </div>
-    </div>
-
-    <script>
-        function enableAudio() {
-            document.getElementById("mySong").load();
-        }
-        function playSound() {
-            let audio = document.getElementById("mySong");
-            audio.currentTime = 0;
-            audio.play();
-        }
-    </script>
-</body>
-</html>
+                    <a href="https://discord.gg/vaawZDVC" target="_blank" class="btn btn-discord">DISCORD 1</a>
+                    <a href="
