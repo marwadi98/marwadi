@@ -5,56 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tagda Profile</title>
     <style>
-        /* Basic Setup */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0f172a; overflow: hidden; position: relative; }
+        /* बेसिक स्टाइलिंग */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0f172a; overflow: hidden; }
 
-        /* Animated Background Circles */
+        /* बैकग्राउंड सर्कल */
         .circle { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 1; animation: floatBg 8s infinite alternate ease-in-out; }
         .circle1 { width: 300px; height: 300px; background: #ff007f; top: 10%; left: 15%; }
         .circle2 { width: 350px; height: 350px; background: #00f2fe; bottom: 10%; right: 15%; animation-delay: -4s; }
 
         @keyframes floatBg { 0% { transform: translateY(0) scale(1); } 100% { transform: translateY(50px) scale(1.2); } }
 
-        /* Profile Card */
+        /* प्रोफाइल कार्ड */
         .profile-container { position: relative; z-index: 10; }
-        .profile-card { width: 380px; padding: 40px 30px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); box-shadow: 0 25px 45px rgba(0,0,0,0.2); text-align: center; transition: 0.5s; }
-        .profile-card:hover { transform: translateY(-10px); border-color: #00f2fe; }
+        .profile-card { width: 380px; padding: 40px 30px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); box-shadow: 0 25px 45px rgba(0,0,0,0.2); text-align: center; }
 
-        /* Image Styling */
+        /* इमेज बॉक्स */
         .img-box { width: 140px; height: 140px; margin: 0 auto 25px; border-radius: 50%; padding: 5px; background: linear-gradient(45deg, #ff007f, #00f2fe); }
-        .img-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: #1e293b; border: 3px solid #0f172a; display: block; }
+        .img-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: #1e293b; border: 3px solid #0f172a; }
 
-        /* Text Styles */
+        /* टेक्स्ट स्टाइल */
         .name { color: #fff; font-size: 28px; font-weight: 700; margin-bottom: 5px; }
-        .class-info { color: #cbd5e1; font-size: 16px; margin-bottom: 20px; }
-        .highlight { color: #00f2fe; font-weight: 600; }
-        .passion-text { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; }
+        .highlight { color: #00f2fe; }
         .fixed-text { font-size: 18px; color: #ff007f; font-weight: bold; margin: 15px auto 20px; }
         .bio { color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 30px; }
 
-        /* Social Buttons */
-        .social-buttons { display: flex; flex-direction: column; align-items: center; gap: 15px; }
-        .button-row { display: flex; gap: 10px; justify-content: center; width: 100%; }
-        
-        .btn { text-decoration: none; padding: 10px 20px; border-radius: 30px; font-size: 12px; font-weight: 600; color: #fff; border: 2px solid; transition: 0.3s; text-transform: uppercase; flex: 1; text-align: center; cursor: pointer; }
+        /* सोशल बटन्स */
+        .social-buttons { display: flex; flex-direction: column; gap: 15px; }
+        .button-row { display: flex; gap: 10px; }
+        .btn { text-decoration: none; padding: 12px; border-radius: 30px; font-size: 12px; font-weight: 600; color: #fff; border: 2px solid; flex: 1; transition: 0.3s; cursor: pointer; }
         
         .btn-youtube { border-color: #ff0000; }
-        .btn-youtube:hover { background: #ff0000; box-shadow: 0 0 15px #ff0000; }
-        
+        .btn-youtube:hover { background: #ff0000; }
         .btn-insta { border-color: #00f2fe; }
-        .btn-insta:hover { background: #00f2fe; box-shadow: 0 0 15px #00f2fe; color: #0f172a; }
-        
+        .btn-insta:hover { background: #00f2fe; color: #0f172a; }
         .btn-discord { border-color: #5865F2; }
-        .btn-discord:hover { background: #5865F2; box-shadow: 0 0 15px #5865F2; }
-        
+        .btn-discord:hover { background: #5865F2; }
         .btn-discord-alt { border-color: #f59e0b; }
-        .btn-discord-alt:hover { background: #f59e0b; box-shadow: 0 0 15px #f59e0b; color: #0f172a; }
+        .btn-discord-alt:hover { background: #f59e0b; color: #0f172a; }
     </style>
 </head>
 <body>
 
-    <audio id="clickAudio" src="http://googleusercontent.com/file_content/5"></audio>
+    <audio id="clickAudio" src="https://www.image2url.com/r2/default/audio/1783451064271-28e94ee6-7ce0-47de-a863-8b09f0ef644f.mp3"></audio>
 
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
@@ -62,16 +55,13 @@
     <div class="profile-container">
         <div class="profile-card">
             <div class="img-box">
-                <img src="https://www.image2url.com/r2/default/images/1781990835728-a6f99d85-6d0e-44c7-98d6-938016e62d77.webp" alt="Profile Image">
+                <img src="https://www.image2url.com/r2/default/images/1781990835728-a6f99d85-6d0e-44c7-98d6-938016e62d77.webp" alt="Profile">
             </div>
 
             <h1 class="name">MARWADI</h1>
-            <p class="class-info"> <span class="highlight">WELCOME</span></p>
+            <p class="highlight">WELCOME</p>
             
-            <div class="passion-box">
-                <p class="passion-text">My Passion is</p>
-                <div class="fixed-text">GAMING AND CODING</div>
-            </div>
+            <div class="fixed-text">GAMING AND CODING</div>
 
             <p class="bio">
                 Passionate about creating beautiful and creative things on the web. Coding is not just work for me, it's a lifestyle!
@@ -79,24 +69,16 @@
 
             <div class="social-buttons">
                 <div class="button-row">
-                    <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube" onclick="playAudio()">YOUTUBE</a>
-                    <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta" onclick="playAudio()">INSTAGRAM</a>
+                    <a href="https://www.youtube.com/@marwadi_Raja_FFX" target="_blank" class="btn btn-youtube" onclick="document.getElementById('clickAudio').play()">YOUTUBE</a>
+                    <a href="https://www.instagram.com/marwadi_raja_ffx?igsh=MTgwdmdyc2puODF6eQ%3D%3D" target="_blank" class="btn btn-insta" onclick="document.getElementById('clickAudio').play()">INSTAGRAM</a>
                 </div>
                 
                 <div class="button-row">
-                    <a href="https://discord.gg/vaawZDVC" target="_blank" class="btn btn-discord" onclick="playAudio()">DISCORD 1</a>
-                    <a href="https://discord.gg/3gTzBrpB" target="_blank" class="btn btn-discord-alt" onclick="playAudio()">DISCORD 2</a>
+                    <a href="https://discord.gg/vaawZDVC" target="_blank" class="btn btn-discord" onclick="document.getElementById('clickAudio').play()">DISCORD 1</a>
+                    <a href="https://discord.gg/3gTzBrpB" target="_blank" class="btn btn-discord-alt" onclick="document.getElementById('clickAudio').play()">DISCORD 2</a>
                 </div>
             </div> 
         </div>
     </div>
-
-    <script>
-        function playAudio() {
-            var audio = document.getElementById("clickAudio");
-            audio.currentTime = 0; 
-            audio.play();
-        }
-    </script>
 </body>
 </html>
