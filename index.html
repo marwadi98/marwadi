@@ -7,7 +7,16 @@
     <style>
         /* बेसिक स्टाइलिंग */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0f172a; overflow: hidden; }
+        
+        body { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            /* नया प्रीमियम ग्रेडिएंट बैकग्राउंड */
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); 
+            overflow: hidden; 
+        }
 
         /* बैकग्राउंड सर्कल */
         .circle { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 1; animation: floatBg 8s infinite alternate ease-in-out; }
@@ -41,8 +50,8 @@
         .btn-insta:hover { background: #00f2fe; color: #0f172a; }
         .btn-discord { border-color: #5865F2; }
         .btn-discord:hover { background: #5865F2; }
-        .btn-discord-alt { border-color: #f59e0b; }
-        .btn-discord-alt:hover { background: #f59e0b; color: #0f172a; }
+        .btn-whatsapp { border-color: #25D366; }
+        .btn-whatsapp:hover { background: #25D366; }
     </style>
 </head>
 <body>
@@ -74,9 +83,8 @@
                 </div>
                 
                 <div class="button-row">
-                    <!-- यहाँ आपकी Discord ID डाल दी गई है -->
-                    <a href="https://discord.com/users/1417554372371550419" target="_blank" class="btn btn-discord" onclick="document.getElementById('clickAudio').play()">DISCORD 1</a>
-                    <a href="https://discord.gg/3gTzBrpB" target="_blank" class="btn btn-discord-alt" onclick="document.getElementById('clickAudio').play()">DISCORD 2</a>
+                    <a href="https://discord.com/users/1417554372371550419" target="_blank" class="btn btn-discord" onclick="document.getElementById('clickAudio').play()">DISCORD</a>
+                    <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="btn btn-whatsapp" onclick="document.getElementById('clickAudio').play()">WHATSAPP</a>
                 </div>
             </div> 
         </div>
